@@ -54,13 +54,25 @@ This allows entrepreneurs to receive guidance on topics such as:
 
 # System Architecture
 
+The system follows a Retrieval-Augmented Generation (RAG) architecture.
+
+Pipeline:
+
+1. Documents related to Meydan Free Zone setup and compliance are collected.
+2. The documents are chunked into smaller text segments.
+3. Each chunk is converted into vector embeddings.
+4. A FAISS vector index is built for semantic search.
+5. User queries are embedded and compared against the vector store.
+6. The most relevant chunks are retrieved as context.
+7. The LLM generates a grounded answer based on retrieved context.
+
 ![Architecture](architecture.png)
 
 Workflow:
 
 1. User asks a question through the Streamlit interface
 2. The system loads regulatory documents from the knowledge base
-3. Documents are split into smaller chunks
+3. Documents are split into smaller chunks for efficient retrieval.
 4. Each chunk is converted into vector embeddings
 5. FAISS vector search retrieves the most relevant information
 6. The retrieved context is sent to a language model
