@@ -12,11 +12,27 @@ The system retrieves information from curated free-zone documentation and genera
 
 ## Application Interface
 
+Below is the Streamlit interface demonstrating the AI Compliance Copilot in action.
+
 ![Interface](screenshots/ui.png)
+
+Example query:
+> How to setup business in Meydan Free Zone?
+
+The assistant retrieves relevant regulatory information and generates contextual guidance for founders.
 
 ## Example Response
 
 ![Example Response](screenshots/example-answer.png)
+
+## Example Questions the System Can Handle
+
+• How do I register a company in Meydan Free Zone?  
+• What documents are required for trade license approval?  
+• How long does company setup take?  
+• What are visa options for founders and employees?  
+• How does license renewal work?  
+• What compliance steps must startups follow in UAE free zones?
 
 ---
 
