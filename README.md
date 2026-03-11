@@ -70,13 +70,15 @@ Pipeline:
 
 Workflow:
 
-1. User asks a question through the Streamlit interface
+1. The user submits a query through the Streamlit interface.
 2. The system loads regulatory documents from the knowledge base
 3. Documents are split into smaller chunks for efficient retrieval.
-4. Each chunk is converted into vector embeddings
+4. Each chunk is converted into vector embeddings using OpenAI embedding models.
 5. FAISS vector search retrieves the most relevant information
 6. The retrieved context is sent to a language model
 7. The AI generates a contextual answer for the user
+
+This ensures responses are grounded in domain-specific knowledge rather than generic LLM outputs.
 
 ---
 
