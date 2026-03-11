@@ -1,120 +1,110 @@
 # AI Compliance Copilot for Meydan Free Zone
 
-An AI-powered assistant that helps entrepreneurs navigate company setup, licensing, visa procedures, and regulatory workflows in Meydan Free Zone, Dubai.
+An AI-powered regulatory copilot designed to assist entrepreneurs in navigating company formation, licensing, visa procedures, and compliance workflows in Meydan Free Zone, Dubai.
 
-This project demonstrates how Retrieval-Augmented Generation (RAG) can be used to build a domain-specific AI assistant for regulatory guidance.
-
-The system retrieves information from curated free-zone documentation and generates contextual answers using a large language model.
+This project demonstrates how Retrieval-Augmented Generation (RAG) can be applied to build domain-specific AI systems that provide grounded, context-aware guidance for real-world regulatory processes.
 
 ---
 
-# Demo
+## Problem
 
-## Application Interface
+Entrepreneurs setting up companies in UAE free zones often face:
 
-Below is the Streamlit interface demonstrating the AI Compliance Copilot in action.
+- Fragmented regulatory information across multiple sources  
+- Confusion around visa eligibility and sequencing  
+- Delays due to incomplete documentation  
+- Lack of clear compliance workflow visibility  
+- Dependence on consultants for basic procedural guidance  
 
-![Interface](screenshots/ui.png)
-
-Example query:
-> How to setup business in Meydan Free Zone?
-
-The assistant retrieves relevant regulatory information and generates contextual guidance for founders.
-
-## Example Response
-
-![Example Response](screenshots/example-answer.png)
-
-## Example Questions the System Can Handle
-
-• How do I register a company in Meydan Free Zone?  
-• What documents are required for trade license approval?  
-• How long does company setup take?  
-• What are visa options for founders and employees?  
-• How does license renewal work?  
-• What compliance steps must startups follow in UAE free zones?
+Even though free zones provide digital setup portals, founders still struggle to understand the end-to-end regulatory journey.
 
 ---
 
-# Problem
+## Solution
 
-Entrepreneurs setting up companies in UAE free zones often face several challenges:
+The Meydan Free Zone AI Compliance Copilot provides:
 
-• Understanding licensing requirements
-• Navigating visa procedures and quotas
-• Managing compliance timelines
-• Preparing documents correctly
-• Finding accurate regulatory information
+- Context-aware regulatory guidance using curated knowledge sources  
+- Step-by-step support for company formation workflows  
+- AI-assisted understanding of licensing and visa procedures  
+- Semantic retrieval of relevant compliance information  
+- Grounded responses instead of generic chatbot outputs  
 
-Even though free zones like Meydan offer digital company formation, founders may still face delays due to incomplete documentation or misunderstanding compliance workflows.
-
----
-
-# Solution
-
-The Meydan Free Zone AI Compliance Copilot provides an intelligent assistant that helps founders understand the regulatory process.
-
-Instead of relying on generic chatbot responses, the system retrieves relevant information from a curated knowledge base of UAE free-zone documentation.
-
-The AI then generates contextual answers based on this information.
-
-This allows entrepreneurs to receive guidance on topics such as:
-
-• Company setup procedures
-• Visa allocation and sponsorship
-• Licensing requirements
-• Compliance obligations
-• Business formation timelines
+This transforms static regulatory documentation into an interactive decision-support system.
 
 ---
 
-# System Architecture
+## System Architecture
 
 The system follows a Retrieval-Augmented Generation (RAG) architecture.
 
-Pipeline:
+### Pipeline
 
-1. Documents related to Meydan Free Zone setup and compliance are collected.
-2. The documents are chunked into smaller text segments.
-3. Each chunk is converted into vector embeddings.
-4. A FAISS vector index is built for semantic search.
-5. User queries are embedded and compared against the vector store.
-6. The most relevant chunks are retrieved as context.
-7. The LLM generates a grounded answer based on retrieved context.
+1. Regulatory documents are collected and stored as a domain knowledge base  
+2. Documents are split into semantic chunks for efficient retrieval  
+3. Each chunk is converted into vector embeddings  
+4. A FAISS vector index enables fast similarity search  
+5. User queries are embedded and matched against the vector store  
+6. Relevant context is retrieved  
+7. The language model generates a grounded, contextual response  
 
 ![Architecture](architecture.png)
 
-Workflow:
+### Why RAG?
 
-1. The user submits a query through the Streamlit interface.
-2. The system loads regulatory documents from the knowledge base
-3. Documents are split into smaller chunks for efficient retrieval.
-4. Each chunk is converted into vector embeddings using OpenAI embedding models.
-5. FAISS vector search retrieves the most relevant information
-6. The retrieved context is sent to a language model
-7. The AI generates a contextual answer for the user
+Traditional chatbots generate generic responses.  
+RAG enables:
 
-This ensures responses are grounded in domain-specific knowledge rather than generic LLM outputs.
+- Domain grounding  
+- Regulatory accuracy  
+- Reduced hallucinations  
+- Explainable AI behaviour  
+- Scalable knowledge updates  
 
----
-
-# Tech Stack
-
-Python
-Streamlit
-OpenAI API
-FAISS Vector Database
-NumPy
-
-AI Techniques Used:
-
-Retrieval-Augmented Generation (RAG)
-Vector Embeddings
-Semantic Search
+This approach is suitable for enterprise regulatory automation systems.
 
 ---
 
-# Project Structure
+## Demo
+
+### Application Interface
+
+Below is the Streamlit interface demonstrating the AI Compliance Copilot.
+
+![UI Screenshot](screenshots/ui.png)
+
+### Example Query
+
+**User Question**
+
+> How do I register a company in Meydan Free Zone?
+
+**AI Behaviour**
+
+- Retrieves licensing workflow context  
+- Identifies required regulatory steps  
+- Generates structured procedural guidance  
+
+---
+
+## Tech Stack
+
+- Python  
+- Streamlit  
+- OpenAI API  
+- FAISS Vector Database  
+- NumPy  
+
+### AI Techniques Used
+
+- Retrieval-Augmented Generation (RAG)  
+- Semantic Search  
+- Vector Embeddings  
+- Context Grounding  
+
+---
+
+## Project Structure
 
 ```
 meydan-ai-compliance-copilot
@@ -179,47 +169,47 @@ Enter your OpenAI API key and start asking questions.
 
 ---
 
-# Example Questions
+## Example Questions the System Can Handle
 
-Try asking the assistant questions like:
-
-• How do I open a consulting company in Meydan Free Zone?
-• What visa challenges do startups face in Dubai free zones?
-• How can I sponsor my spouse after setting up a company in Meydan Free Zone?
-• What documents are required for company setup in Meydan Free Zone?
-
----
-
-# Future Improvements
-
-Possible extensions of this project include:
-
-• Integration with official free-zone APIs
-• Multilingual support (Arabic + English)
-• Guided compliance workflows for founders
-• Support for multiple UAE free zones
-• Automatic document updates from regulatory sources
+- How do I register a company in Meydan Free Zone?  
+- What documents are required for trade license approval?  
+- How does visa allocation work for founders?  
+- What compliance steps must startups follow?  
+- How does license renewal work in UAE free zones?  
 
 ---
 
-# Use Case
+## Future Improvements
 
-This system could serve as a digital compliance assistant for:
-
-• Entrepreneurs setting up companies in Dubai
-• Free zone authorities providing automated guidance
-• Business consultants supporting international founders
-
----
-
-# Author
-
-Ashish Seru
-MSc Artificial Intelligence
-De Montfort University Dubai
+- Integration with official free-zone APIs  
+- Multilingual support (Arabic + English)  
+- Workflow automation instead of static guidance  
+- Live regulatory data updates  
+- Support for multiple UAE free zones  
+- Deployment as enterprise SaaS compliance platform  
 
 ---
 
-# License
+## Use Cases
 
-This project is intended for educational and demonstration purposes.
+- Entrepreneurs planning UAE company formation  
+- Free-zone authorities building AI support systems  
+- Business consultants automating regulatory guidance  
+- AI researchers exploring domain-specific RAG systems  
+
+---
+
+## Author
+
+Ashish Seru  
+MSc Artificial Intelligence  
+De Montfort University Dubai  
+
+---
+
+## License
+
+This project is intended for educational, research, and demonstration purposes.
+## License
+
+This project is intended for educational, research, and demonstration purposes.
