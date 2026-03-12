@@ -91,7 +91,7 @@ Below is the Streamlit interface demonstrating the AI Compliance Copilot.
 
 - Python  
 - Streamlit  
-- OpenAI APIs  
+- OpenAI API    
 - FAISS Vector Database  
 - NumPy  
 
