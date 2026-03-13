@@ -173,7 +173,7 @@ Enter your OpenAI API key and start asking questions.
 
 - How do I register a company in Meydan Free Zone?  
 - What documents are required for trade license approval?  
-- How does visa allocation work for founders?  
+- How does visa allocation work for founders?
 - What compliance steps must startups follow?  
 - How does license renewal work in UAE free zones?  
 
