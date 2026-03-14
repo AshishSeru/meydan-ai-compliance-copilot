@@ -12,7 +12,7 @@ Entrepreneurs setting up companies in UAE free zones often face:
 
 - Fragmented regulatory information across multiple sources  
 - Confusion around visa eligibility and sequencing  
-- Delays due to incompletes documentation  
+- Delays due to incomplete documentation  
 - Lack of clear compliance workflow visibility  
 - Dependence on consultants for basic procedural guidance  
 
